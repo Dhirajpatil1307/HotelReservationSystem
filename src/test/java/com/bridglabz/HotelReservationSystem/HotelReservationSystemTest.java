@@ -28,6 +28,13 @@ public class HotelReservationSystemTest {
         Assertions.assertTrue(hotelReservation.addHotel("Bridgewood", 150, 50));
         Assertions.assertTrue(hotelReservation.addHotel("Ridgewood", 220, 150));
     }
+    @Test
+    public void givenHotelNamesAndRates_findCheapestHotelAndReturnNameOfHotelWithRent() {
+        Assertions.assertTrue(hotelReservation.addHotel("Lakewood", 110, 90));
+        Assertions.assertTrue(hotelReservation.addHotel("Bridgewood", 150, 50));
+        Assertions.assertTrue(hotelReservation.addHotel("Ridgewood", 220, 150));
+        Assertions.assertTrue(hotelReservation.findCheapestHotel("11Sep2020", "12Sep2020"));
+    }
 }
 
 
