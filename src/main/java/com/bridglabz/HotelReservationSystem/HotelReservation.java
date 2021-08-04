@@ -82,7 +82,18 @@ public class HotelReservation {
             throw new HotelReservationException("Please entered the proper hotelName and rate");
         }
     }
-
+    public boolean addHotel(String hotelName, int regWeekdayRate, int regWeekendRate, int hotelRating, int rewWeekdayRate, int rewWeekendRate) throws HotelReservationException {
+        try {
+            Hotel hotel = new Hotel(hotelName, regWeekdayRate, regWeekendRate, hotelRating, rewWeekdayRate, rewWeekendRate);
+            hotelMap.put(hotelName, hotel);
+            if (hotelName.length() < 2) {
+                throw new HotelReservationException("Please enter the proper hotel hotelName and RegWeekdayRate");
+            }
+            return true;
+        } catch (NullPointerException exception) {
+            throw new HotelReservationException("Please entered the proper hotelName and rate");
+        }
+    }
     /**
      * this is the method to find the cheapest hotel.
      * @param fromDate;

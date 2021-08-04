@@ -76,6 +76,13 @@ public class HotelReservationSystemTest {
         hotelReservation.addHotel("Ridgewood", 220, 150, 5);
         Assertions.assertTrue(hotelReservation.findBestRatedHotelForGivenDates("11Sep2020", "12Sep2020"));
     }
+    @Test
+    public void whenAddedRatesForRewardCustomers_shouldAdd_hotelWithAllRates() throws HotelReservationException {
+        HotelReservation hotelReservationObject = new HotelReservation();
+        Assertions.assertTrue(hotelReservationObject.addHotel("Lakewood", 110, 90, 3, 80, 80));
+        Assertions.assertTrue(hotelReservationObject.addHotel("Bridgewood", 150, 50, 4, 110, 50));
+        Assertions.assertTrue(hotelReservationObject.addHotel("Ridgewood", 220, 150, 5, 100, 40));
+    }
 }
 
 

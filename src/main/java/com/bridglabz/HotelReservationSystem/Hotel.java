@@ -6,6 +6,24 @@ public class Hotel {
     private int regWeekdayRate;
     private int regWeekendRate;
     private int hotelRating;
+    public int rewWeekdayRate;
+    public int rewWeekendRate;
+
+    // setter and getter method for special weekday rates for reward customer.
+    public int getRewWeekdayRate() {
+        return rewWeekdayRate;
+    }
+    public void setRewWeekdayRate(int rewWeekdayRate) {
+        this.rewWeekdayRate = rewWeekdayRate;
+    }
+
+    // getter and setter method for special weekend rates for reward customer.
+    public int getRewWeekendRate() {
+        return rewWeekendRate;
+    }
+    public void setRewWeekendRate(int rewWeekendRate) {
+        this.rewWeekendRate = rewWeekendRate;
+    }
 
     // getter and setter methods for getting hotel rating.
     public int getHotelRating() {
@@ -73,5 +91,25 @@ public class Hotel {
         this.regWeekdayRate = regWeekdayRate;
         this.regWeekendRate = regWeekendRate;
         this.hotelRating = hotelRating;
+    }
+
+    /**
+     * this is constructor overloading to initialize,
+     * @param hotelName;
+     * @param regWeekdayRate;
+     * @param regWeekendRate;
+     * @param hotelRating;
+     * @param rewWeekdayRate;
+     * @param rewWeekendRate;
+     */
+    public Hotel(String hotelName, int regWeekdayRate, int regWeekendRate, int hotelRating, int rewWeekdayRate,
+                 int rewWeekendRate) {
+        super();
+        this.hotelName = hotelName;
+        this.regWeekdayRate = regWeekdayRate;
+        this.regWeekendRate = regWeekendRate;
+        this.hotelRating = hotelRating;
+        this.rewWeekdayRate = rewWeekdayRate;
+        this.rewWeekendRate = rewWeekendRate;
     }
 }
