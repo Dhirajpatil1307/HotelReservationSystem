@@ -5,6 +5,16 @@ public class Hotel {
     private String hotelName;
     private int regWeekdayRate;
     private int regWeekendRate;
+    private int hotelRating;
+
+    // getter and setter methods for getting hotel rating.
+    public int getHotelRating() {
+        return hotelRating;
+    }
+
+    public void setHotelRating(int hotelRating) {
+        this.hotelRating = hotelRating;
+    }
 
     //getter and setter method for hotelName
     public String getHotelName() {
@@ -38,5 +48,12 @@ public class Hotel {
         this.hotelName = hotelName;
         this.regWeekdayRate = regWeekdayRate;
         this.regWeekendRate = regWeekendRate;
+    }
+    public Hotel(String hotelName, int regWeekdayRate, int regWeekendRate, int hotelRating) {
+        super();
+        this.hotelName = hotelName;
+        this.regWeekdayRate = regWeekdayRate;
+        this.regWeekendRate = regWeekendRate;
+        this.hotelRating = hotelRating;
     }
 }

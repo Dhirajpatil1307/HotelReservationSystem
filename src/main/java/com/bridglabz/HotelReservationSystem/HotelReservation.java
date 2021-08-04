@@ -30,7 +30,12 @@ public class HotelReservation {
         hotelMap.put(name, hotelObject);
         return true;
     }
-
+    // Method to add Hotel names, rates, and rating of hotels
+    public boolean addHotel(String name, int regWeekdayRate, int regWeekendRate, int hotelRating) {
+        Hotel hotelObject = new Hotel(name, regWeekdayRate, regWeekendRate, hotelRating);
+        hotelMap.put(name, hotelObject);
+        return true;
+    }
     // Method to find cheapest hotel
     public boolean findCheapestHotel(String fromDate, String toDate) {
         Map<Integer, ArrayList<Hotel>> rentMap = createRentMap(fromDate, toDate);
