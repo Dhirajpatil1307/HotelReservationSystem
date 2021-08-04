@@ -68,6 +68,14 @@ public class HotelReservationSystemTest {
             System.out.println(exception);
         }
     }
+    @Test
+    public void whenFindBestRatedMethodCalled_shouldReturn_bestRatedHotel() throws HotelReservationException {
+        HotelReservation hotelReservation = new HotelReservation();
+        hotelReservation.addHotel("Lakewood", 110, 90, 3);
+        hotelReservation.addHotel("Bridgewood", 150, 50, 4);
+        hotelReservation.addHotel("Ridgewood", 220, 150, 5);
+        Assertions.assertTrue(hotelReservation.findBestRatedHotelForGivenDates("11Sep2020", "12Sep2020"));
+    }
 }
 
 

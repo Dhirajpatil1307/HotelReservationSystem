@@ -131,6 +131,42 @@ public class HotelReservation {
     }
 
     /**
+     * this is method to find the best rated hotel for given dates.
+     * @param fromDate;
+     * @param toDate;
+     * @return boolean type;
+     */
+    public boolean findBestRatedHotelForGivenDates(String fromDate, String toDate) {
+        int rating = 0;
+        int rent = 0;
+        String bestRatedHotel = "";
+        for (Map.Entry<String, Hotel> entry : hotelMap.entrySet()) {
+            if (entry.getValue().getHotelRating() > rating) {
+                rating = entry.getValue().getHotelRating();
+                bestRatedHotel = entry.getKey();
+                rent = calculateRent(fromDate, toDate, entry.getValue().getRegWeekdayRate(),
+                        entry.getValue().getRegWeekendRate());
+            }
+        }
+        System.out.println("Best Rated Hotel : " + bestRatedHotel + ", Rent : " + rent);
+        return true;
+    }
+
+    /**
+     * this is method to calculate total rent for given date.
+     * @param fromDate;
+     * @param toDate;
+     * @param weekdayRate;
+     * @param weekendRate;
+     * @return integer type;
+     */
+    public static int calculateRent(String fromDate, String toDate, int weekdayRate, int weekendRate) {
+        int[] numOfDays = numberOfDays(fromDate, toDate);
+        int weekdayRent = weekdayRate * numOfDays[0];
+        int weekendRent = weekendRate * numOfDays[1];
+        return weekdayRent + weekendRent;
+    }
+    /**
      * this is the method to calculate total rate for given days.
      * @param fromDate;
      * @param toDate;

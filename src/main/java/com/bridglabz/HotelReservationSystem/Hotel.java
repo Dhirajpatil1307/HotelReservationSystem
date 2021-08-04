@@ -11,7 +11,6 @@ public class Hotel {
     public int getHotelRating() {
         return hotelRating;
     }
-
     public void setHotelRating(int hotelRating) {
         this.hotelRating = hotelRating;
     }
@@ -23,6 +22,7 @@ public class Hotel {
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
     }
+
     // getter and setter method for regular weekday rates
     public int getRegWeekdayRate() {
         return regWeekdayRate;
@@ -30,6 +30,7 @@ public class Hotel {
     public void setRegWeekdayRate(int regWeekdayRate) {
         this.regWeekdayRate = regWeekdayRate;
     }
+
     // getter and setter method for regular weekend days
     public int getRegWeekendRate() {
         return regWeekendRate;
@@ -37,6 +38,7 @@ public class Hotel {
     public void setRegWeekendRate(int regWeekendRate) {
         this.regWeekendRate = regWeekendRate;
     }
+
     /**
      * constructor for Hotel class
      * @param hotelName;
@@ -46,7 +48,6 @@ public class Hotel {
         this.hotelName = hotelName;
         this.regWeekdayRate = regWeekdayRate;
     }
-
     /**
      * constructor overloading
      * @param hotelName;
